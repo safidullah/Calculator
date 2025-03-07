@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edumetrix - KPK Teachers Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1>Edumetrix</h1>
+            <div class="input-group">
+                <input type="text" id="studentName" placeholder="Enter Your Name">
+            </div>
+
+            <div id="qualifications-container">
+                <div class="qualification-entry">
+                    <div class="qualification-header">
+                        <h2>Qualification</h2>
+                        <button class="delete-btn" onclick="deleteQualification(this)">×</button>
+                    </div>
+                    <select class="qualification-select">
+                        <option value="">Select</option>
+                        <option value="SSC">SSC</option>
+                        <option value="HSSC">HSSC</option>
+                        <option value="BA/B.Sc">BA/B.Sc</option>
+                        <option value="MA/M.Sc">MA/M.Sc</option>
+                        <option value="BS">BS</option>
+                        <option value="B.Ed/ADE/Shahadtul Almia/Qari Sanad">B.Ed/ADE/Shahadtul Almia/Qari Sanad</option>
+                        <option value="M.Ed">M.Ed</option>
+                        <option value="BS/MA Education">BS/MA Education</option>
+                        <option value="MS/M.Phil">MS/M.Phil</option>
+                        <option value="Ph.D">Ph.D</option>
+                    </select>
+                    <div class="marks-container">
+                        <div class="marks-input">
+                            <label>Obtained</label>
+                            <input type="number" class="obtained-marks" placeholder="Obtained Marks" min="0" onchange="validateMarks(this)">
+                        </div>
+                        <div class="marks-input">
+                            <label>Total</label>
+                            <input type="number" class="total-marks" placeholder="Total Marks" min="0" onchange="validateMarks(this)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-btn" onclick="addQualification()">Add More Qualification</button>
+            <button class="calculate-btn" onclick="calculate()">Calculate</button>
+            <button class="clear-btn" onclick="clearAll()">Clear All</button>
+
+            <div id="result" class="result-container" style="display: none;">
+                <div id="result-content">
+                    <h2 class="result-name"></h2>
+                    <h3>Your Academic Score is:</h3>
+                    <div class="scores-list">
+                        <!-- Scores will be inserted here by JavaScript -->
+                    </div>
+                    <div class="total-score">
+                        Total Score: <span class="final-score"></span>
+                    </div>
+                    <div class="quote">
+                        "Success in life is not about reaching the destination, but about enjoying the journey and growing through the challenges."
+                    </div>
+                </div>
+                <div class="download-buttons">
+                    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+                    <button class="download-btn" onclick="downloadImage()">Download Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

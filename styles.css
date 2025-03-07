@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1a73e8;
+}
+
+h1 {
+    text-align: center;
+    color: #1a73e8;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.qualification-entry {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #1a73e8;
+}
+
+.qualification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.marks-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.marks-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.marks-input label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+
+.add-btn {
+    background: #28a745;
+    color: white;
+}
+
+.calculate-btn {
+    background: #1a73e8;
+    color: white;
+}
+
+.clear-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #1a73e8;
+    position: relative;
+}
+
+#result-content {
+    border: 2px solid #1a73e8;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: white;
+}
+
+.result-name {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.scores-list {
+    margin: 15px 0;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.score-item .calculation {
+    color: #666;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.total-score {
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    text-align: center;
+}
+
+.quote {
+    font-style: normal;
+    color: #666;
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.download-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.download-btn {
+    background: #1a73e8;
+    color: white;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 400px) {
+    .calculator-card {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    .marks-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-buttons {
+        grid-template-columns: 1fr;
+    }
+} 
